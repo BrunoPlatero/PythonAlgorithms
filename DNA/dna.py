@@ -23,11 +23,6 @@ def main():
         sequence = file.read()
 
     # Find longest match of each STR in DNA sequence
-
-    # Store each subsequence into a list, using list and keys functions, ignoring the name
-    # https://www.w3schools.com/python/trypython.asp?filename=demo_ref_dictionary_keys
-    # https://stackoverflow.com/questions/40443331/how-to-get-everything-from-the-list-except-the-first-element-using-list-slicing
-    # https://www.w3schools.com/python/ref_dictionary_keys.asp
     subsequences = list(new_database[0].keys())[1:]
 
     # Iterate through the subsequences, assigning to each one the longest match and store the results in a dictionary
@@ -36,7 +31,6 @@ def main():
         results[subsequence] = longest_match(sequence, subsequence)
 
     # Check database for matching profiles
-    # Loop over each person on database
     for person in new_database:
         # Keep track of how many subsequences match
         count = 0
